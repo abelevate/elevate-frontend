@@ -1,52 +1,22 @@
 module.exports = [
   {
     id: 1,
-    label: "Home",
-    items: [
-      {
-        name: "Home",
-        routePath: "/",
-      },
-      
-    ],
+    name: "Home",
+    routepath: "/",
   },
-
   {
     id: 2,
-    label: "About us",
-    items: [
-      {
-        name: "About us",
-        routePath: "/about",
-      },
-      
-    ],
-
+    name: "About us",
+    routepath: "/about",
   },
-
   {
     id: 3,
-    label: "Resume Builder",
-    items: [
-      {
-        name: "Resume Builder",
-        routePath: "/resumebuilder",
-      },
-      
-    ],
-    
+    name: "Resume Builder",
+    routepath: "/resumebuilder",
   },
-
   {
     id: 4,
-    label: "Contact us",
-    items: [
-      {
-        name: "Contact us",
-        routePath: "/contact",
-      },
-      
-    ],
-    
+    name: "Contact us",
+    routepath: "/contact",
   },
 ];
