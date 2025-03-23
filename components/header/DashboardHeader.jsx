@@ -42,6 +42,7 @@ const DashboardHeader = () => {
                             <div className="logo">
                                 <Link href="/">
                                     <Image
+                                    style={{ height: "55px"}}
                                         alt="brand"
                                         src="/images/elevate_logo.png"
                                         width={154}

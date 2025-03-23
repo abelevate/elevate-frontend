@@ -40,6 +40,7 @@ const DefaulHeader2 = () => {
                   height={50}
                   src="/images/elevate_logo.png"
                   alt="brand"
+                  style={{ height: "55px"}}
                 />
               </Link>
             </div>
