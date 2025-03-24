@@ -64,16 +64,32 @@ const Editor = () => {
     const handleDownload = async () => {
         const element = resumeRef.current;
         if (!element) return;
-
+    
+        const pdf = new jsPDF("p", "mm", "a4");
+        const pageWidth = pdf.internal.pageSize.getWidth();
+        const pageHeight = pdf.internal.pageSize.getHeight();
+    
+        // Capture full resume as an image
         const canvas = await html2canvas(element, { scale: 2 });
         const imgData = canvas.toDataURL("image/png");
-        const pdf = new jsPDF("p", "mm", "a4");
-        const imgWidth = 210;
+    
+        const imgWidth = pageWidth;
         const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-        pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+    
+        let yPosition = 0; // Tracks the vertical position on each new page
+    
+        while (yPosition < imgHeight) {
+            if (yPosition > 0) {
+                pdf.addPage(); // Add a new page for additional content
+            }
+    
+            pdf.addImage(imgData, "PNG", 0, -yPosition, imgWidth, imgHeight);
+            yPosition += pageHeight; // Move down by one page height
+        }
+    
         pdf.save("Resume.pdf");
     };
+    
 
     return (
         <div className="container-fluid bg-white">

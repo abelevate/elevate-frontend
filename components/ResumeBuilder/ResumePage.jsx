@@ -20,7 +20,15 @@ const ResumePage = forwardRef(function ResumePage(props, ref) {
     const TemplateComponent = resumeTemplates[selectedTemplate] || resumeTemplates["default"];
 
     return (
-        <div ref={ref} className="container bg-white p-4 overflow-auto" style={{ scrollbarWidth: "none" }}>
+        <div ref={ref} 
+             className="container bg-white p-4" 
+             style={{ 
+                 scrollbarWidth: "none",
+                 pageBreakInside: "avoid",  // Avoid breaking inside elements
+                 breakAfter: "always",      // Ensure a new page after this
+                 marginBottom: "20px"       // Add space to prevent cutoff
+             }}
+        >
             <TemplateComponent data={data} color={color} />
         </div>
     );
