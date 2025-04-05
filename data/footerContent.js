@@ -17,6 +17,7 @@ module.exports = [
     menuList: [
       { name: "About Us", route: "/about" },
       { name: "Contact", route: "/contact" },
+      { name: "Privacy Policy", route: "/terms" },
     ],
   },
 
