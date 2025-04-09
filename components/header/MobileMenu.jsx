@@ -71,11 +71,39 @@ const MobileMenu = () => {
         >
           <div className="nav-outer" style={{ display: "flex", alignItems: "center" }}>
             <div className="logo-box">
-              <div className="logo">
-                <Link href="/">
-                  <Image width={154} height={50} src="/images/elevate_logo.png" alt="brand" style={{ height: "55px"}} />
-                </Link>
-              </div>
+              <div
+  className="logo"
+  style={{
+    display: "flex",
+    alignItems: "center",
+    gap: "6px", // space between logo and Beta
+    whiteSpace: "nowrap",
+    marginRight: "20px" // prevent wrapping
+  }}
+>
+  <Link href="/" style={{ display: "flex", alignItems: "center" }}>
+    <Image
+      width={120}
+      height={50}
+      src="/images/elevate_logo.png"
+      alt="brand"
+      style={{ height: "55px", width: "auto" }}
+    />
+  </Link>
+  <span
+    style={{
+      backgroundColor: "transparent",
+      border: "2px solid #0A3D62",
+      color: "#0A3D62",
+      padding: "2px 6px",
+      borderRadius: "4px",
+      fontSize: "10px",
+    }}
+  >
+    Beta
+  </span>
+</div>
+
             </div>
 
             <MobileSidebar />

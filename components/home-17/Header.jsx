@@ -47,15 +47,31 @@ const Header = () => {
       <div className="auto-container">
         <div className="main-box">
           <div className="nav-outer">
-            <div className="logo-box" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-              <div className="logo">
-                <Link href="/">
+            <div
+              className="logo-box"
+              style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}
+            >
+              <div className="logo" style={{ display: "flex", alignItems: "center",marginRight: "20px" }}>
+                <Link href="/" style={{ display: "flex", alignItems: "center" }}>
                   <Image width={154} height={50} src="/images/elevate_logo.png" alt="brand" />
-                  <span style={{ backgroundColor:"transparent" ,border: "2px solid #0A3D62", color: "#0A3D62", padding: "2px ", borderRadius: "4px", fontSize: "12px", marginLeft: "3px"}}>Beta</span>
-
                 </Link>
+                <span
+                  style={{
+                    backgroundColor: "transparent",
+                    border: "2px solid #0A3D62",
+                    color: "#0A3D62",
+                    padding: "2px 6px",
+                    borderRadius: "4px",
+                    fontSize: "12px",
+                    marginLeft: "6px",
+                    whiteSpace: "nowrap"
+                  }}
+                >
+                  Beta
+                </span>
               </div>
             </div>
+
 
             <HeaderNavContent />
           </div>
@@ -66,7 +82,7 @@ const Header = () => {
                 onClick={handleLogout}
                 style={{
                   backgroundColor: "transparent",
-                  color: "#ff5a5f", 
+                  color: "#ff5a5f",
                   border: "2px solid #ff5a5f",
                   padding: "8px 16px",
                   borderRadius: "5px",
@@ -114,13 +130,13 @@ const Header = () => {
               <Link href="/myprofile">
                 <button
                   style={{
-                  backgroundColor: "transparent",
-                  color: "#28a745", 
-                  border: "2px solid #28a745",
-                  padding: "8px 16px",
-                  borderRadius: "5px",
-                  cursor: "pointer",
-                  transition: "all 0.3s ease-in-out",
+                    backgroundColor: "transparent",
+                    color: "#28a745",
+                    border: "2px solid #28a745",
+                    padding: "8px 16px",
+                    borderRadius: "5px",
+                    cursor: "pointer",
+                    transition: "all 0.3s ease-in-out",
                   }}
                   onMouseEnter={(e) => {
                     e.target.style.backgroundColor = "#28a745";
