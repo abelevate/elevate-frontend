@@ -60,9 +60,9 @@ const Header = () => {
                     backgroundColor: "transparent",
                     border: "2px solid #0A3D62",
                     color: "#0A3D62",
-                    padding: "2px 6px",
-                    borderRadius: "4px",
-                    fontSize: "12px",
+                    padding: "2px 4px",
+                    borderRadius: "8px",
+                    fontSize: "10px",
                     marginLeft: "6px",
                     whiteSpace: "nowrap"
                   }}

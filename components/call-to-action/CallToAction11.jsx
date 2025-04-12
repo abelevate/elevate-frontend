@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaChrome } from "react-icons/fa";
 
 const CallToAction11 = () => {
   return (
@@ -26,6 +27,7 @@ const CallToAction11 = () => {
                     href="/employers-dashboard/post-jobs"
                     className="theme-btn"
                   >
+                    <FaChrome  style={{paddingRight:"4px", fontSize:"1.5rem"}}/>
                     Download Extension
                   </Link>
                 </div>

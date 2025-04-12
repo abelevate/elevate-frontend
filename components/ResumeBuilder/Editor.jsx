@@ -8,7 +8,7 @@ import Achievments from "./sections/Achievments";
 import Skills from "./sections/Skills";
 import Others from "./sections/Others";
 import { resData } from "./data/resumeData";
-import { sections } from "./data/sections";
+import { sections , sectionIcons} from "./data/sections";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
@@ -35,7 +35,7 @@ const Editor = () => {
     useEffect(() => {
         localStorage.setItem("resumeData", JSON.stringify(resumeInfo));
     }, [resumeInfo, activeSection]);
-    
+
     const resumeRef = useRef(null);
 
     function handleSave(e) {
@@ -64,32 +64,32 @@ const Editor = () => {
     const handleDownload = async () => {
         const element = resumeRef.current;
         if (!element) return;
-    
+
         const pdf = new jsPDF("p", "mm", "a4");
         const pageWidth = pdf.internal.pageSize.getWidth();
         const pageHeight = pdf.internal.pageSize.getHeight();
-    
+
         // Capture full resume as an image
         const canvas = await html2canvas(element, { scale: 2 });
         const imgData = canvas.toDataURL("image/png");
-    
+
         const imgWidth = pageWidth;
         const imgHeight = (canvas.height * imgWidth) / canvas.width;
-    
+
         let yPosition = 0; // Tracks the vertical position on each new page
-    
+
         while (yPosition < imgHeight) {
             if (yPosition > 0) {
                 pdf.addPage(); // Add a new page for additional content
             }
-    
+
             pdf.addImage(imgData, "PNG", 0, -yPosition, imgWidth, imgHeight);
             yPosition += pageHeight; // Move down by one page height
         }
-    
+
         pdf.save("Resume.pdf");
     };
-    
+
 
     return (
         <div className="container-fluid bg-white">
@@ -101,11 +101,12 @@ const Editor = () => {
                             <button
                                 key={key}
                                 onClick={() => tabChange(key)}
-                                className={`btn ${activeSection === key ? 'btn-warning' : 'btn-outline-secondary'}`}
+                                className={`btn ${activeSection === key ? 'btn-warning' : 'btn-outline-secondary'} d-flex align-items-center`}
                             >
-                                {sections[key]}
+                                {sectionIcons[key]} {sections[key]}
                             </button>
                         ))}
+
                     </div>
                     <div>
                         {activeSection === "personal_details" && <PersonalDetails handleSave={handleSave} handleTitleChange={handleTitleChange} setCurrValues={setCurrValues} currValues={currValues} />}
@@ -123,14 +124,15 @@ const Editor = () => {
                         <div className="d-flex align-items-center">
                             <button onClick={handleDownload} className="btn btn-primary">
                                 Download
+                                <FaCloudDownloadAlt size={30} className="ms-2 text-white" />
+
                             </button>
-                            <FaCloudDownloadAlt size={30} className="ms-2 text-primary" />
                         </div>
                     </div>
 
                     <div className="mt-3">
                         <label className="form-label fw-bold">Select Resume Template:</label>
-                        <select 
+                        <select
                             className="form-select"
                             value={selectedTemplate}
                             onChange={(e) => setSelectedTemplate(e.target.value)}

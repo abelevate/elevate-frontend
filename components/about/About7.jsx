@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaBolt } from "react-icons/fa6";
 
 const About7 = () => {
   return (
@@ -41,7 +42,8 @@ const About7 = () => {
                     Want to seriously boost your job search game? Elevate lets you blitz through applications at lightning speed. Apply to way more jobs in way less time.
                   </p>
                 </div>
-                <Link href="/resumebuilder" className="theme-btn -blue">
+                <Link href="/resumebuilder" className="theme-btn -blue d-inline-flex align-items-center gap-2 rounded-5xl">
+                <FaBolt style={{paddingRight: "6px" , fontSize: "1.5rem"}} />
                   Boost Your Job Search
                 </Link>
               </div>

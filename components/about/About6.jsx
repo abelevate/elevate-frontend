@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BsCursorFill } from "react-icons/bs";
 
 const About6 = () => {
   return (
@@ -25,7 +26,8 @@ const About6 = () => {
                   </div>
                 </div>
               
-                <Link href="/about" className="theme-btn -blue">
+                <Link  href="/about" className="theme-btn -blue rounded-6xl" >
+                <BsCursorFill style={{paddingRight: "4px", fontSize: "1.5rem"}} />
                   Start Applying
                 </Link>
               </div>

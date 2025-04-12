@@ -1,4 +1,5 @@
 import Image from "next/image";
+import "./index.css"
 
 const Index = () => {
   return (
@@ -17,10 +18,10 @@ const Index = () => {
                 data-aos="fade-up"
               >
                 <h3 className="text-center text-md-start">
-                  Automate Job Applications
-                  <br /> Elevate Your Career
+                  Automate Your Job Applications,
+                  <br /> Elevate Your Career.
                 </h3>
-                <div className="text col-12 col-md-6 text-center text-md-start">
+                <div style={{fontSize: "1.4rem"}}  className=" text  col-md-8 text-center text-md-start">
                   The ultimate tool that helps you skip the tedious forms, apply faster by autofilling applications, attach resumes instantly, and build great CVs.
                 </div>
               </div>
