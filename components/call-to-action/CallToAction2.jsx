@@ -25,7 +25,7 @@ const CallToAction2 = () => {
               <FileText size={18} /> Resume Builder
             </span>
           </Link>
-          <Link href="/" aria-label="Autofill Extension">
+          <Link href="https://chromewebstore.google.com/detail/fmmjbioialkffjgcdkdonhniomdfpapo?utm_source=item-share-cb" aria-label="Autofill Extension">
             <span className="theme-btn btn-style-two flex items-center gap-2">
               <Puzzle size={18} /> Autofill Extension
             </span>

@@ -5,7 +5,7 @@ module.exports = [
     menuList: [
       { name: "Home", route: "/home" },
       { name: "Resume Builder", route: "/resumebuilder" },
-      { name: "Autofill Application Extension", route: "/job-list-v3" },
+      { name: "Autofill Application Extension", route: "https://chromewebstore.google.com/detail/fmmjbioialkffjgcdkdonhniomdfpapo?utm_source=item-share-cb" },
       { name: "My Profile", route: "/myprofile" },
     
     ],

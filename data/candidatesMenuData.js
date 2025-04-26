@@ -20,5 +20,13 @@ module.exports = [
     routePath: "/resumebuilder",
     active: "",
   },
+
+  {
+    id: 3,
+    name: "Autofill Extension",
+    icon: "fa-thin fa-puzzle-piece",
+    routePath: "https://chromewebstore.google.com/detail/fmmjbioialkffjgcdkdonhniomdfpapo?utm_source=item-share-cb",
+    active: "",
+  },
  
 ];

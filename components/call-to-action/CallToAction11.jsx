@@ -23,14 +23,17 @@ const CallToAction11 = () => {
                 </div>
 
                 <div className="mt-20">
-                  <Link
-                    href="/employers-dashboard/post-jobs"
-                    className="theme-btn"
-                  >
-                    <FaChrome  style={{paddingRight:"4px", fontSize:"1.5rem"}}/>
-                    Download Extension
-                  </Link>
-                </div>
+  <a
+    href="https://chromewebstore.google.com/detail/fmmjbioialkffjgcdkdonhniomdfpapo?utm_source=item-share-cb"
+    className="theme-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaChrome style={{ paddingRight: "4px", fontSize: "1.5rem" }} />
+    Download Extension
+  </a>
+</div>
+
               </div>
             </div>
           </div>
