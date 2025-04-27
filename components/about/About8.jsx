@@ -57,7 +57,7 @@ const About8 = () => {
                   {/* Button with Icon */}
                   <Link
                     href="/resumebuilder"
-                    className="theme-btn -blue d-inline-flex align-items-center gap-2"
+                    className="theme-btn -blue d-inline-flex align-items-center gap-2 rounded-pill"
                   >
                     <FaFileAlt />
                     Build Your Resume

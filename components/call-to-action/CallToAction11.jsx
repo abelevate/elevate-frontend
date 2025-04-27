@@ -17,22 +17,22 @@ const CallToAction11 = () => {
               <div className="sec-title pb-16">
                 <h2 className="">Looking for a Job? Let’s Make It Effortless.</h2>
                 <div className="text">
-                Elevate is here to revolutionize your job search. Our tools help you apply faster, skip manual form-filling, and create polished resumes with ease—so you can spend less time applying and more time getting hired
+                  Elevate is here to revolutionize your job search. Our tools help you apply faster, skip manual form-filling, and create polished resumes with ease—so you can spend less time applying and more time getting hired
                   {/* <br /> users and search 15.8 million CVs in our
                   <br /> database. */}
                 </div>
 
                 <div className="mt-20">
-  <a
-    href="https://chromewebstore.google.com/detail/fmmjbioialkffjgcdkdonhniomdfpapo?utm_source=item-share-cb"
-    className="theme-btn"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <FaChrome style={{ paddingRight: "4px", fontSize: "1.5rem" }} />
-    Download Extension
-  </a>
-</div>
+                  <a
+                    href="https://chromewebstore.google.com/detail/fmmjbioialkffjgcdkdonhniomdfpapo?utm_source=item-share-cb"
+                    className="theme-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaChrome style={{ paddingRight: "8px", fontSize: "1.5rem" }} />
+                    Download Extension
+                  </a>
+                </div>
 
               </div>
             </div>

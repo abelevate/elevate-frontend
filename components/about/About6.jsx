@@ -26,7 +26,7 @@ const About6 = () => {
                   </div>
                 </div>
               
-                <Link  href="https://chromewebstore.google.com/detail/fmmjbioialkffjgcdkdonhniomdfpapo?utm_source=item-share-cb" className="theme-btn -blue rounded-6xl" >
+                <Link  href="https://chromewebstore.google.com/detail/fmmjbioialkffjgcdkdonhniomdfpapo?utm_source=item-share-cb" className="theme-btn -blue rounded-pill rounded-6xl" >
                 <BsCursorFill style={{paddingRight: "4px", fontSize: "1.5rem"}} />
                   Start Applying
                 </Link>
